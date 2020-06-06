@@ -1,0 +1,121 @@
+html {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  text-align: center;
+}
+
+body {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+body > div {
+  margin-right: 20px;
+}
+hr {
+  margin-top: 3px;
+}
+
+li {
+  text-align: left;
+  font-size: 40px;
+  list-style: none;
+  margin: 0;
+  text-align: center;
+}
+
+.todo:hover,
+.todo.done {
+  text-decoration: line-through;
+}
+
+.todo {
+  margin-right: 20px;
+  text-align: center;
+}
+
+.trash-icon {
+  color: #fc5185;
+  transition: all 0.3s ease-in-out;
+}
+
+.trash-icon:hover {
+  transform: scale(1.2);
+}
+
+#addBTN {
+  color: #fff !important;
+  text-transform: uppercase;
+  text-decoration: none;
+  background: #fc5185;
+  padding: 20px;
+  border-radius: 50px;
+  display: inline-block;
+  border: none;
+  transition: all 0.4s ease 0s;
+}
+
+#addBTN:hover {
+  text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+  transition: all 0.4s ease 0s;
+}
+
+/* INPUT */
+.form__group {
+  position: relative;
+  padding: 15px 0 0;
+  display: inline;
+}
+.form__field {
+  font-family: inherit;
+  border: 0;
+  border-bottom: 2px solid #9b9b9b;
+  outline: 0;
+  font-size: 1.3rem;
+  padding: 7px 0;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+.form__field::placeholder {
+  color: transparent;
+}
+.form__field:placeholder-shown ~ .form__label {
+  font-size: 1.3rem;
+  cursor: text;
+  top: 20px;
+}
+.form__label {
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: #9b9b9b;
+}
+.form__field:focus {
+  padding-bottom: 6px;
+  font-weight: 700;
+  border-width: 3px;
+  border-image: linear-gradient(to right, #11998e, #38ef7d);
+  border-image-slice: 1;
+}
+.form__field:focus ~ .form__label {
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: #11998e;
+  font-weight: 700;
+}
+/* reset input */
+.form__field:required,
+.form__field:invalid {
+  box-shadow: none;
+}
+.form__group.field {
+  display: inline;
+}
